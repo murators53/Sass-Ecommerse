@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+/* combination */
+.combination {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(/assets/img/rectangle4.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  height: 800px;
+  /* navbar */
+}
+.combination .title {
+  color: white;
+  padding: 20px 70px;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 67.2px;
+  letter-spacing: 0.02em;
+  width: 600px;
+  position: absolute;
+  left: 0%;
+  top: 30%;
+}
+.combination .banner {
+  color: white;
+  background-image: url(/assets/img/rectangle3.png);
+  background-repeat: no-repeat;
+  background-blend-mode: darken, normal;
+  text-align: center;
+  background-size: 80%;
+  background-position: center;
+  z-index: 99;
+  bottom: 0;
+  position: absolute;
+}
+.combination .navbar {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 30px 70px;
+}
+.combination .navbars {
+  display: flex;
+  gap: 20px;
+}
+.combination .navbars-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.combination .navbars-logo span {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+}
+.combination .navbars-logo p {
+  font-size: 24px;
+  font-weight: 300;
+}
+.combination .navbars-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.combination .navbar-right {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */
