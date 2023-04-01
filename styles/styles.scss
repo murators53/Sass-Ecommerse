@@ -1,11 +1,27 @@
 @import "variables";
 @import "modules";
+@import "mediaquery";
 
 body {
   font-family: $first-font;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@mixin logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 300;
+  }
 }
 
 /* combination */
@@ -93,11 +109,42 @@ body {
         display: flex;
         align-items: center;
         gap: 20px;
+        @include tablet {
+          display: none;
+        }
       }
     }
     &-right {
       display: flex;
       align-items: center;
+      @include tablet {
+        display: none;
+      }
+    }
+    &-bar{
+      position: relative;
+      &s{
+        li{
+          display: flex;
+          flex-direction: column;
+          i{
+          }
+          &:hover{
+            .navbar-bars-right,
+            .navbar-bars-menu{
+              display: block;
+            }
+          }
+        }
+        &-right,
+        &-menu{
+          display: none;
+          position: absolute;
+        }
+      }      
+      li{
+        list-style-type: none;
+      }
     }
   }
 }
@@ -124,11 +171,11 @@ body {
   &-cards {
     display: flex;
     flex-direction: row;
+    width: 90%;
     gap: 25px;
-    padding: 0 10px;
     justify-content: center;
     &-type {
-      width: 30%;
+      flex: 1 1;
       box-shadow: 2px 5px 10px -12px #111;
       img {
         width: 100%;
@@ -190,9 +237,10 @@ body {
     display: flex;
     flex-direction: row;
     gap: 25px;
-    padding: 0 10px;
+    width: 90%;
     justify-content: center;
     &-type {
+      flex: 1 1;
       background-color: #fff;
       border-radius: 15px;
       width: 30%;
@@ -235,13 +283,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 200px auto;
-  margin-bottom: 50px;
+  margin: 80px auto;
+  margin-bottom: 90px;
   justify-content: center;
   &-title {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 25px;
     hr {
       @extend %title-top;
     }
@@ -256,6 +305,10 @@ body {
     padding: 0 10px;
     justify-content: center;
     width: 90%;
+    &-type:nth-child(2) {
+      background-color: $banner-color2;
+      color: black;
+    }
     &-type {
       background-color: $banner-color1;
       color: white;
@@ -268,6 +321,8 @@ body {
         width: 100%;
         height: 530px;
         object-fit: cover;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
       .content {
         display: flex;
@@ -298,6 +353,7 @@ body {
       }
     }
   }
+
   &-cards2 {
     display: flex;
     flex-direction: row;
@@ -305,7 +361,11 @@ body {
     padding: 0 10px;
     justify-content: center;
     width: 90%;
-    &-type{
+    &-type:nth-child(2) {
+      background-color: $banner-color2;
+      color: black;
+    }
+    &-type {
       background-color: $banner-color1;
       color: white;
       width: 43%;
@@ -316,6 +376,8 @@ body {
         width: 100%;
         height: 530px;
         object-fit: cover;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
       .content {
         display: flex;
@@ -347,3 +409,78 @@ body {
     }
   }
 }
+
+.footer {
+  width: 90%;
+  background-color: $banner-color3;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px auto;
+  gap: 40px;
+  padding: 50px 5%;
+  margin-bottom: 0;
+
+  &-left {
+    display: flex;
+    gap: 35px;
+    &s {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      h3 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      hr {
+        height: 3px;
+        background-color: white;
+        border: none;
+        border-radius: 15px;
+        width: 60px;
+        margin: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+  &-right {
+    &-logo {
+      @include logo;
+    }
+    &-social {
+      display: flex;
+      gap: 15px;
+      justify-content: end;
+    }
+  }
+}
+
+.rights {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 0;
+  p {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 12.8px;
+  }
+}
+
+/* 
+width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px auto;
+  margin-bottom: 90px;
+  justify-content: center;
+*/
