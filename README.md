@@ -1,9 +1,9 @@
-<h1> My Github Profile  with SASS  </h1>
+# SASS Modern Responsive Design
 
- ![](picture.png) </br>
+ ### `Deploy` 
 
-<h3> it can continue </h3> 
+<img src="https://www.svgrepo.com/show/376339/netlify.svg" ald="Cloud Image" widt='20' height='20' /> https://modern-portfolio-sass.netlify.app/
 
-<h3> Record VIEW </h3>
+### `Screen` </br>
 
-![](screen.gif) </br>
+![](screen.gif)  
