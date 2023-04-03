@@ -1,4 +1,4 @@
-# SASS Modern Responsive Design
+# SASS Modern Ecommerse Responsive Design
 
  ### `Deploy` 
 
