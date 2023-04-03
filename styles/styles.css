@@ -2,10 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 .product3-title hr, .product2-title hr, .product-title hr {
   margin: 0;
-  width: 20%;
+  width: 50%;
   height: 2px;
   border-radius: 5px;
   background-color: #ab0433;
+}
+@media only screen and (min-width: 546px) and (max-width: 860px) {
+  .product3-title hr, .product2-title hr, .product-title hr {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 545px) {
+  .product3-title hr, .product2-title hr, .product-title hr {
+    width: 50%;
+  }
 }
 
 body {
@@ -94,17 +104,28 @@ body {
     height: 170px;
   }
 }
+@media only screen and (min-width: 546px) and (max-width: 860px) {
+  .combination .banner img {
+    height: 280px;
+  }
+}
 .combination .banner-design {
   position: absolute;
-  top: 95%;
+  top: 97%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 350px;
+  width: 400px;
 }
 @media only screen and (max-width: 545px) {
   .combination .banner-design {
     top: 100%;
+    width: 250px;
+  }
+}
+@media only screen and (min-width: 546px) and (max-width: 860px) {
+  .combination .banner-design {
+    top: 94%;
   }
 }
 @media only screen and (max-width: 545px) {
@@ -114,7 +135,7 @@ body {
 }
 @media only screen and (max-width: 545px) {
   .combination .banner-design p {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 .combination .banner-design button {
@@ -122,6 +143,9 @@ body {
   border: none;
   border-radius: 25px;
   padding: 7px 10px;
+  background-color: #FF753A;
+  color: white;
+  font-weight: 600;
 }
 @media only screen and (max-width: 545px) {
   .combination .banner-design button {
@@ -208,6 +232,17 @@ body {
 }
 .combination .navbar-bar {
   position: relative;
+  display: none;
+}
+@media only screen and (min-width: 546px) and (max-width: 860px) {
+  .combination .navbar-bar {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 545px) {
+  .combination .navbar-bar {
+    display: flex;
+  }
 }
 .combination .navbar-bars li {
   display: flex;
@@ -590,6 +625,16 @@ body {
   justify-content: center;
   width: 90%;
 }
+@media only screen and (min-width: 546px) and (max-width: 860px) {
+  .product3-cards {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 545px) {
+  .product3-cards {
+    padding: 0;
+  }
+}
 .product3-cards-type:nth-child(2) {
   background-color: #EAEAEA;
   color: black;
@@ -664,11 +709,13 @@ body {
 @media only screen and (min-width: 546px) and (max-width: 860px) {
   .product3-cards2 {
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 545px) {
   .product3-cards2 {
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 .product3-cards2-type {
@@ -686,7 +733,7 @@ body {
 }
 @media only screen and (max-width: 545px) {
   .product3-cards2-type {
-    width: 47.2%;
+    width: 45.2%;
     flex-grow: 0;
   }
 }
@@ -753,9 +800,21 @@ body {
   padding: 50px 5%;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 545px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+  }
+}
 .footer-left {
   display: flex;
   gap: 35px;
+}
+@media only screen and (max-width: 545px) {
+  .footer-lefts:nth-child(2) {
+    display: none;
+  }
 }
 .footer-lefts {
   display: flex;
@@ -781,6 +840,11 @@ body {
   margin: 0;
   margin-top: 5px;
 }
+@media only screen and (max-width: 545px) {
+  .footer-lefts hr {
+    margin: 0 auto;
+  }
+}
 .footer-right-logo {
   display: flex;
   align-items: center;
@@ -794,6 +858,11 @@ body {
 .footer-right-logo p {
   font-size: 24px;
   font-weight: 300;
+}
+@media only screen and (max-width: 545px) {
+  .footer-right-logo {
+    display: none;
+  }
 }
 .footer-right-social {
   display: flex;

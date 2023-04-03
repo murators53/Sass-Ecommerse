@@ -90,25 +90,32 @@ body {
       @include mobile {
         height: 170px;
       }
+      @include tablet {
+        height: 280px;
+      }
     }
     &-design {
       position: absolute;
-      top: 95%;
+      top: 97%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      width: 350px;
-      @include mobile{
+      width: 400px;
+      @include mobile {
         top: 100%;
+        width: 250px;
       }
-      h1{
-        @include mobile{
+      @include tablet {
+        top: 94%;
+      }
+      h1 {
+        @include mobile {
           font-size: 18px;
         }
       }
-      p{
-        @include mobile{
-          font-size: 14px;
+      p {
+        @include mobile {
+          font-size: 10px;
         }
       }
       button {
@@ -116,7 +123,10 @@ body {
         border: none;
         border-radius: 25px;
         padding: 7px 10px;
-        @include mobile{
+        background-color: $btn-color;
+        color: white;
+        font-weight: 600;
+        @include mobile {
           font-size: 12px;
         }
       }
@@ -131,7 +141,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 30px 70px;
-    @include mobile{
+    @include mobile {
       width: 90%;
       margin: 0 auto;
       float: left;
@@ -189,6 +199,13 @@ body {
     }
     &-bar {
       position: relative;
+      display: none;
+      @include tablet {
+        display: flex;
+      }
+      @include mobile {
+        display: flex;
+      }
       &s {
         li {
           display: flex;
@@ -459,7 +476,7 @@ body {
         flex-grow: 0;
         flex-basis: auto;
       }
-      @include mobile{
+      @include mobile {
         width: 100%;
         flex-grow: 0;
         flex-basis: auto;
@@ -517,7 +534,7 @@ body {
   margin: 70px auto;
   margin-bottom: 70px;
   justify-content: center;
-  @include mobile{
+  @include mobile {
     margin-top: 50px;
   }
   &-title {
@@ -539,6 +556,12 @@ body {
     padding: 0 10px;
     justify-content: center;
     width: 90%;
+    @include tablet {
+      padding: 0;
+    }
+    @include mobile {
+      padding: 0;
+    }
     &-type:nth-child(2) {
       background-color: $banner-color2;
       color: black;
@@ -607,9 +630,11 @@ body {
     }
     @include tablet {
       flex-wrap: wrap;
+      padding: 0;
     }
     @include mobile {
       flex-wrap: wrap;
+      padding: 0;
     }
     &-type {
       background-color: $banner-color1;
@@ -622,7 +647,7 @@ body {
         flex-grow: 0;
       }
       @include mobile {
-        width: 47.2%;
+        width: 45.2%;
         flex-grow: 0;
       }
 
@@ -684,8 +709,18 @@ body {
   gap: 40px;
   padding: 50px 5%;
   margin-bottom: 0;
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+  }
 
   &-left {
+    @include mobile {
+      &s:nth-child(2) {
+        display: none;
+      }
+    }
     display: flex;
     gap: 35px;
     &s {
@@ -710,12 +745,18 @@ body {
         width: 60px;
         margin: 0;
         margin-top: 5px;
+        @include mobile {
+          margin: 0 auto;
+        }
       }
     }
   }
   &-right {
     &-logo {
       @include logo;
+      @include mobile {
+        display: none;
+      }
     }
     &-social {
       display: flex;
